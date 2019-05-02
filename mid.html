@@ -1,0 +1,68 @@
+<html>
+<head>
+</head>
+<body>
+<br>Enter the Name <input type='text' id='tx1' name="name" maxlength=10><br>
+<br> Enter emp id <input type='text' id='e1' name="empid" maxlength=10><br>
+Select the events
+<input type="radio" id="rb1" name="events" value="indoor events" onclick= "funct()"> Indoor Events<br>
+<select id="indoor events" disabled >
+<option value=""></option>
+<option value="table tennis">table tennis</option>
+<option value="carrom">carrom</option>
+<option value="chess">chess</option>
+</select>
+<input type='button' id='bu1' name="register" value="register" disabled maxlength=10>
+<br><input type="radio" id="rb2" name= "events" value="Outdoor events" onclick="func1()">Outdoor Events<br>
+<select id="outdoor events" disabled>
+<option value=""></option>
+<option value="cricket">cricket</option>
+<option value="badmiton">badmiton</option>
+<option value="volley ball">volley ball</option>
+</select>
+<input type='button' id='bu2' name="register" value="register" disabled maxlength=10>
+</body>
+<script>
+function funct() 
+{
+
+ var ind=document.getElementById("indoor events"); 
+ var buti=document.getElementById("bu1").value;
+ var ind1
+ for (var i=0;i<ind.length;i++)
+{
+   if(ind[i].checked)
+   {
+   ind1=ind[i].value;
+   ind1.disabled=false;
+   buti=disabled=false;
+   }
+   else
+   {
+   ind1.disabled=true;
+   buti.disabled=true;
+   }
+}
+}   
+function func1()
+{
+var out=document.getElementById(" outdoor events");
+var but=document.getElementById("bu2").value;
+var out1;
+for (var i=0;i<out.length;i++)
+{
+   if(out[i].checked)
+   {
+   out1=ind[i].value;
+   out1.disabled=false;
+   but.disabled=false;
+   }
+   else
+   {
+   out1.disabled=true;
+   but.disabled=true;
+   }
+}
+}
+</script>
+</html>
